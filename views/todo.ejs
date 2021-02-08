@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>Liste To Do</h1>
+
+        <ul>
+            <% for(var i = 0 ; i < chaquetodo.length ; i++) {%>
+            <li> <%= chaquetodo[i] %> </li>
+            <% } %>
+        </ul>
+
+        <form action="/addtodo" method="GET">
+            <input type="text" name="newtodo">
+            <input type="submit" value="Envoyer">
+        </form>
+    </body>
+</html>
