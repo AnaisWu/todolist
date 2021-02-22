@@ -7,11 +7,15 @@
 
         <ul>
             <% for(var i = 0 ; i < chaquetodo.length ; i++) {%>
-            <li> <%= chaquetodo[i] %> </li>
+            <li> <%= chaquetodo[i] %> 
+                    <a href="/<%= i %>">Delete</a>
+            </li>
             <% } %>
         </ul>
 
-        <form action="/addtodo" method="GET">
+        <p><%= msg %></p>
+
+        <form action="/" method="POST">
             <input type="text" name="newtodo">
             <input type="submit" value="Envoyer">
         </form>
